@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Lista Dados</title>
+</head>
+<body>
+
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr> 
+				<th scope="col"> # </th>
+				<th scope="col"> Nome </th>
+				<th scope="col"> Contato </th>
+				<th scope="col"> Tipo </th>
+				<th scope="col"> Descricao </th>
+				<th scope="col"> Localizacao </th>
+				<th scope="col"> Status</th>
+			</tr>
+ 	</thead>
+ 	<tbody>
+ 		<tr th:each="pet : ${listaDados}">
+			<td th:text="${pet.id}"> 1 </td>
+		 	<td th:text="${pet.solicitante}">  Nome </td>
+			<td th:text="${pet.soliContato}">  Contato </td>
+		 	<td th:text="${pet.tipo}"> Tipo </td>
+		 	<td th:text="${pet.descricao}"> Descricao </td>
+		 	<td th:text="${pet.localizacao}"> Localizacao </td>
+		 	<td th:text="${pet.status}"> Status </td>
+		 </tr>
+ 	</tbody>
+ </table>
+</div>
+	
+
+</body>
+</html>

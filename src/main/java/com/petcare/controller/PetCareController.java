@@ -27,11 +27,11 @@ public class PetCareController {
 	}
 	
 	
-	@GetMapping("/listaDados") //Método que vai retornar as informações do banco de dados
+	@GetMapping("/listarDados") //Método que vai retornar as informações do banco de dados
 	public String listaDados(Model request) {		
 		List<PetCare> lista = petcareRepository.findAll(); //o List é o mesmo que um  Select * from SuaTabela definido pelo próprio  framework 
 		request.addAttribute("listaDados", lista);
-		return "listaDados";
+		return "listarDados";
 	}
 	
 
