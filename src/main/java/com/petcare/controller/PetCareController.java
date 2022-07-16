@@ -15,14 +15,17 @@ import com.petcare.repository.PetCareRepository;
 @RequestMapping("/")
 public class PetCareController {
 	
+	
+	@Autowired //Permite que o próprio Spring controle o repositório do Banco de Dados
+	private PetCareRepository petcareRepository; //"Acordando" o meu Banco de Dados que está no representado no Repository
+	
+	
 	@GetMapping("hello") 	//endpoint que será informado na URL
 	public String hello(Model request) {
 		request.addAttribute("nome", "PROTOCOLO");
 		return "hello"; 	//busca na pasta templates uma página html criada com este nome ("hello").
 	}
 	
-	@Autowired //Permite que o próprio Spring controle o repositório do Banco de Dados
-	private PetCareRepository petcareRepository; //"Acordando" o meu Banco de Dados que está no representado no Repository
 	
 	@GetMapping("/listaDados") //Método que vai retornar as informações do banco de dados
 	public String listaDados(Model request) {		

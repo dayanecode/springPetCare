@@ -24,8 +24,8 @@ public class PetCareControllerAPI {
 	@Autowired
 	private PetCareRepository petcareRepository;
 	
-	@GetMapping("/health")
-	public String health() {
+	@GetMapping("/test")
+	public String test() {
 		return "Application is ON";
 	}
 	
