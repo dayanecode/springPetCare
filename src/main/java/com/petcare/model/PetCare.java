@@ -2,6 +2,7 @@ package com.petcare.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -9,9 +10,9 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class PetCare {
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY) // FUNCIONA COM O MYSQL
-	@GeneratedValue(generator = "increment") //Característica de atribuição de ID do Postgre
-	@GenericGenerator(name="increment", strategy ="increment") //Característica de atribuição de ID do Postgre
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // FUNCIONA COM O MYSQL
+	//@GeneratedValue(generator = "increment") //Característica de atribuição de ID do Postgre
+	//@GenericGenerator(name="increment", strategy ="increment") //Característica de atribuição de ID do Postgre
 	private Long id;
 	private String solicitante;
 	private String soliContato;
