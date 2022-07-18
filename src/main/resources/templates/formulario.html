@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>formulario</title>
+</head>
+<body>
+<div class="container">
+<div class="mb-0">
+	<h1 class="display-6">Formulário</h1>
+</div>
+
+<form action="formularioNovo" method="POST">
+	<div class="form-group">
+		<label for="solicitante">Seu Nome</label>
+		<input class="form-control" name="solicitante" placeholder="Informe seu nome:">
+	</div>
+	
+	<div class="form-group">
+		<label for="soliContato">Contato</label>
+		<input class="form-control" name="soliContato" placeholder="Informe seu contato:">
+	</div>
+	
+	<div class="form-group">
+		<label for="tipo">Tipo de Animal</label>
+		<input class="form-control" name="tipo" placeholder="Qual o tipo do Animal?">
+	</div>
+	
+	<div class="form-group">
+		<label for="descricao">Característica</label>
+		<input  class="form-control" name="descricao" placeholder="Informe uma descrição:">
+	</div>
+	
+	<div class="form-group">
+		<label for="localizacao">Localização</label>
+		<input class="form-control" name="localizacao" placeholder="Informe a localização:">	
+	</div>
+	
+		<button type="submit"> Cadastrar</button>
+</form>
+</div>
+</body>
+</html>
